@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete Loan Application Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">What are you looking for?</div>
+        
+        <form id="loanForm">
+            <!-- Common Fields for All Types -->
+            <div class="form-row">
+                <div class="form-group">
+                    <label class="form-label">Loan Type *</label>
+                    <div class="radio-group" id="loanTypeGroup">
+                        <label class="radio-option">
+                            <input type="radio" name="loanType" value="newLoan"> New Loan
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="loanType" value="refinance"> Refinance
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="loanType" value="coupling"> Decoupling
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="loanType" value="equity"> Equity Loan
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Property Type *</label>
+                    <div class="radio-group" id="propertyTypeGroup">
+                        <label class="radio-option">
+                            <input type="radio" name="propertyType" value="private" checked> Private Residential
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="propertyType" value="hdb"> HDB
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dynamic Fields Container -->
+            <div id="dynamicFields"></div>
+
+            <!-- Common Contact Fields -->
+            <div class="form-row">
+                <div class="form-group">
+                    <label class="form-label">Name *</label>
+                    <div class="input-group">
+                        <div class="input-group-icon">👤</div>
+                        <input type="text" name="name" placeholder="Contact Name" required>
+                    </div>
+                    <div class="error-message">Name is required</div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Contact Number *</label>
+                    <div class="input-group">
+                        <div class="input-group-icon">📱</div>
+                        <input type="tel" name="contactNumber" placeholder="Contact Number" required>
+                    </div>
+                    <div class="error-message">Contact number is required</div>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label class="form-label">Email *</label>
+                    <div class="input-group">
+                        <div class="input-group-icon">✉️</div>
+                        <input type="email" name="email" placeholder="Contact Email" required>
+                    </div>
+                    <div class="error-message">Valid email is required</div>
+                </div>
+            </div>
+
+            <div class="consent-checkbox">
+                <label>
+                    <input type="checkbox" name="consent" required>
+                    I consent to the collection, use and disclosure of my personal data for the purposes set in our 
+                    <a href="https://theloanconnection.com.sg/privacy-policy" target="_blank">Privacy Policy</a> as required by the Personal Data Protection Act 2012.
+                </label>
+                <div class="error-message">Please agree to the privacy notice</div>
+            </div>
+
+            <button type="submit" class="compare-btn">Compare rates</button>
+        </form>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
